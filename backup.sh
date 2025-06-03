@@ -46,5 +46,6 @@ dpkg --get-selections > $FULLPATH_SOFTWARE/$SOFTWARE_LIST_FILE_NAME
 # rsync -ah --info=progress2 --stats --log-file=$FULLPATH_LOGDIR/$LOG_FILE_NAME_DATA $SOURCE_DATA $FULLPATH_DATA 
 
 echo [SECTION] Backup HOMEDIR to $FULLPATH_HOMEDIR, logging to $FULLPATH_LOGDIR/$LOG_FILE_NAME_HOMEDIR
-rsync -ah --info=progress2 --stats --log-file=$FULLPATH_LOGDIR/$LOG_FILE_NAME_HOMEDIR $SOURCE_HOMEDIR $FULLPATH_HOMEDIR
+rsync --archive --info=progress2 --stats --log-file=$FULLPATH_LOGDIR/$LOG_FILE_NAME_HOMEDIR $SOURCE_HOMEDIR $FULLPATH_HOMEDIR
 
+ 
